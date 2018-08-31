@@ -1,0 +1,72 @@
+
+--if #tab > 1 then
+--i = 1
+while i < #tab do
+j = i
+while j > 0 and tab[j] < tab[j - 1] do
+tab[j],tab[j - 1] = tab[j - 1],tab[j]
+j -= 1
+end
+i += 1
+end
+end
+
+
+CONST	WRITE,3,1
+z
+CALC	COPY,3,2
+y
+LOAD	2,0,0
+LOAD	2,1,-1
+CALC	LT,1,0
+BRANCH	LTEZ,0,x
+LOAD	2,0,0
+STORE	2,0,-1
+STORE	2,1,0
+CONST	SUB,2,1
+BRANCH	GTZ,2,y
+x
+CONST	ADD,3,1
+CALC	COPY,3,2
+CONST	LT,2,16
+BRANCH	GTZ,2,z
+HALT
+
+
+1-00-11-01
+zC-11-10-01
+y8-10-00-00
+8-10-01-FF
+C-01-00-19
+5-00-00-x06
+8-10-00-00
+9-10-00-FF
+9-10-01-00
+1-11-10-01
+4-00-10-yF8
+x1-10-11-01
+C-11-10-01
+2-01-10-1F
+4-00-10-zF3
+F000
+
+
+1301
+CE01
+8800
+89FF
+C419
+5006
+8800
+98FF
+9900
+1E01
+42F8
+1B01
+CE01
+26(n=10)
+42F3
+F000
+
+n = length of array
+

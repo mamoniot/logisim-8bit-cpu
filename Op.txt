@@ -1,0 +1,77 @@
+4-2-2-8
+formats:
+op,code,target r,immediate
+op,source r,target r,immediate
+op,source r,target r,code
+
+PC-Relative Jumping
+Base plus offset addressing
+
+
+0:0000 NOP
+1:0001 CONST	-code,r,immediate
+2:0010 CONST	-code,r,immediate
+3:0011 CONST	-code,r,immediate
+4:0100 BRANCH	-code,r,off
+5:0101 BRANCH	-code,r,off
+6:0110 JUMP	-code,r,off
+7:0111 GOTO	-code,r,off
+8:1000 LOAD	-r,r,off
+9:1001 STORE	-r,r,off
+A:1010 PULL	-r,r,off
+B:1011 PUSH	-r,r,off
+C:1100 CALC	-r,r,code
+D:1101
+E:1110
+F:1111 HALT
+
+BRANCH
+0-00 BGTZ
+0-01 BGTZAL
+0-10 BLTZ
+0-11 BLTZAL
+1-00 BLTEZ
+1-01 BLTEZAL
+1-10 BGTEZ
+1-11 BGTEZAL
+JUMP
+00 J
+01 JAL
+10 JR
+11 JRAL
+GOTO
+00 GO
+01 GOAL
+10 GOR
+11 GORAL
+
+CONST
+01-00 WRITE
+01-01
+01-10 ADD
+01-11 SUB
+10-00 GT
+10-01 LT
+10-10 LTE
+10-11 GTE
+CALC
+0-0000 NOP
+0-0001 COPY
+0-0010 ADD
+0-0011 SUB
+1-0000 AND
+1-0001 OR
+1-0010 NAND
+1-0011 NOR
+1-0100 XOR
+1-0101 XNOR
+1-0110 EQU
+1-0111 NEQU
+1-1000 GT
+1-1001 LT
+1-1010 LTE
+1-1011 GTE
+
+
+
+
