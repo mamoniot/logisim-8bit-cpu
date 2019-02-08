@@ -3,4 +3,4 @@ An 8-bit cpu in logism using only basic logic gates and wire. Uses a custom CISC
 
 Op.txt gives an extremely brief overview of the instruction set.
 
-Insertion sort.txt contains hand compiled psuedo-code for the insertion sort algorithm.
+Insertion_sort.txt contains hand compiled psuedo-code for the insertion sort algorithm.
